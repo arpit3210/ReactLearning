@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+
+var username= prompt("What is your name");
+var designation = prompt("what is your designation");
+var productname = prompt("what is product name");
+
+class Product
+{
+    _productName;
+
+    get ProductName() {
+        return this._productName;
+    }
+    set ProductName(newName){
+        if(designation=="admin")
+        {
+            this._productName = newName;
+
+        }
+        else{
+            document.write(`Unauthorized : Hello   ${username} you are not autorization for product set`)
+        }
+    }
+}
+
+
+let obj =new Product();
+obj.ProductName = productname;
+
+if(obj.ProductName)
+{
+    document.write("Product Name :" + obj.ProductName);
+}
+
+    </script>
+</body>
+</html>
